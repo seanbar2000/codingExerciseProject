@@ -1,7 +1,7 @@
 import { MongoClient } from "mongodb";
 
 const connectionString =
-  "mongodb://mongo:uIRbwulzDWAKrZVkpVafGtNPowUSqoHf@mongodb.railway.internal:27017myu/";
+  "mongodb://mongo:uIRbwulzDWAKrZVkpVafGtNPowUSqoHf@ballast.proxy.rlwy.net:26050";
 
 export async function getAllCodeBlocks() {
   // Establishes connection with db and returns all code blocks in the db
