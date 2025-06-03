@@ -21,7 +21,9 @@ export function CodeBlockPage() {
   }
   useEffect(() => {
     //create socket handshake
-    const socket = io("http://localhost:3002");
+    const socket = io(
+      "https://codingexerciseproject-production.up.railway.app"
+    );
     socketRef.current = socket;
     socket.emit("join", { roomId: exercise.id, roomCode: exercise.template });
     //initialize page information (if user is student update existing information)
