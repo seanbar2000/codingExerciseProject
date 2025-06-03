@@ -1,4 +1,7 @@
-import { insertCodeBlock, getAllCodeBlocks } from "../DBClients/MongoClient.js";
+const {
+  insertCodeBlock,
+  getAllCodeBlocks,
+} = require("../DBClients/MongoClient.js");
 export async function getCodeBlocks() {
   // Gets all the code blocks in the db
   const codeBLocksArray = await getAllCodeBlocks();

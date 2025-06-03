@@ -1,4 +1,4 @@
-import { MongoClient } from "mongodb";
+const { MongoClient } = require("mongodb");
 
 const connectionString =
   "mongodb://mongo:uIRbwulzDWAKrZVkpVafGtNPowUSqoHf@ballast.proxy.rlwy.net:26050";

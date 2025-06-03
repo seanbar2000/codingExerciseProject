@@ -1,9 +1,9 @@
-import express from "express";
-import codeBlockRouter from "./apiHandlers/codeBlocksApiHandler.js";
-import { initDB } from "./services/codeBlocksService.js";
-import cors from "cors";
-import http from "http";
-import { Server } from "socket.io";
+const express = require("express");
+const codeBlockRouter = require("./apiHandlers/codeBlocksApiHandler.js");
+const { initDB } = require("./services/codeBlocksService.js");
+const cors = require("cors");
+const http = require("http");
+const { Server } = require("socket.io");
 
 const app = express();
 const port = 3002;

@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { getCodeBlocks } from "../services/codeBlocksService.js";
+const { Router } = require("express");
+const { getCodeBlocks } = require("../services/codeBlocksService.js");
 const codeBlockRouter = Router();
 
 codeBlockRouter.get("/list", async (req, res) => {
