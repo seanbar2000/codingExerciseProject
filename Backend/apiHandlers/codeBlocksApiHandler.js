@@ -6,4 +6,4 @@ codeBlockRouter.get("/list", async (req, res) => {
   let codeBlockMap = await getCodeBlocks();
   res.json({ codeBlockMap });
 });
-export default codeBlockRouter;
+module.exports = { codeBlockRouter };

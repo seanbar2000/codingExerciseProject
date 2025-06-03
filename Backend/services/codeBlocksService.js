@@ -2,12 +2,12 @@ const {
   insertCodeBlock,
   getAllCodeBlocks,
 } = require("../DBClients/MongoClient.js");
-export async function getCodeBlocks() {
+async function getCodeBlocks() {
   // Gets all the code blocks in the db
   const codeBLocksArray = await getAllCodeBlocks();
   return codeBLocksArray;
 }
-export function initDB() {
+function initDB() {
   // inserts all code blocks (hard coded) to db when app starts running
   let codeBlock1 = {
     title: "print to console 'hello world'",
@@ -36,3 +36,5 @@ export function initDB() {
   insertCodeBlock(codeBlock3);
   insertCodeBlock(codeBlock4);
 }
+
+module.exports = { getCodeBlocks, initDB };

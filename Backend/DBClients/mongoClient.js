@@ -3,7 +3,7 @@ const { MongoClient } = require("mongodb");
 const connectionString =
   "mongodb://mongo:uIRbwulzDWAKrZVkpVafGtNPowUSqoHf@ballast.proxy.rlwy.net:26050";
 
-export async function getAllCodeBlocks() {
+async function getAllCodeBlocks() {
   // Establishes connection with db and returns all code blocks in the db
   let allCodeBlocks;
   const client = new MongoClient(connectionString);
@@ -21,7 +21,7 @@ export async function getAllCodeBlocks() {
     return allCodeBlocks;
   }
 }
-export async function insertCodeBlock(codeBlock) {
+async function insertCodeBlock(codeBlock) {
   // Establishes connection to db and inserts a code block to the db
   const client = new MongoClient(connectionString);
 
@@ -36,3 +36,5 @@ export async function insertCodeBlock(codeBlock) {
     await client.close();
   }
 }
+
+module.exports = { getAllCodeBlocks, insertCodeBlock };
